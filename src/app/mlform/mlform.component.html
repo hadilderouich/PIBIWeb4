@@ -1,0 +1,54 @@
+<div class="dashboard-container">
+  <div class="header">
+    <img src="assets/image/logo.png" alt="Logo ESPRIT" class="logo" />
+    <h1>Welcome, Head of Admissions Services</h1>
+    <div class="header-buttons">
+      <button (click)="logout()" class="logout-btn">Logout</button>
+    </div>
+  </div>
+  
+<div class="form-container">
+  <img src="assets\image/494338882_674959801928846_3480204458780734380_n-removebg-preview.png" alt="Logo ESPRIT" class="logo" />
+  <h2>Interview Result Date Prediction</h2>
+  
+  <form [formGroup]="loginForm" (ngSubmit)="envoyer()">
+    
+    <!-- Champ nom -->
+    <div class="form-group">
+      <label for="nom">First name</label>
+      <input type="text" id="nom" formControlName="nom">
+      <div *ngIf="loginForm.get('nom')?.invalid && loginForm.get('nom')?.touched" style="color: red;">
+        Name is required.
+      </div>
+    </div>
+
+    <!-- Champ prénom -->
+    <div class="form-group">
+      <label for="prenom">Last name</label>
+      <input type="text" id="prenom" formControlName="prenom">
+      <div *ngIf="loginForm.get('prenom')?.invalid && loginForm.get('prenom')?.touched" style="color: red;">
+        The last name should contain only letters
+      </div>
+    </div>
+
+    <!-- Champ date d'entretien -->
+    <div class="form-group">
+      <label for="dateEntretien">Interview date</label>
+      <input type="date" id="dateEntretien" formControlName="dateEntretien">
+      <div *ngIf="loginForm.get('dateEntretien')?.invalid && loginForm.get('dateEntretien')?.touched" style="color: red;">
+        Date is required.
+      </div>
+    </div>
+
+    <button type="submit">Predict</button>
+  </form>
+
+  <div *ngIf="predictedDate">
+    ✅ Predicted Date : {{ predictedDate }}
+  </div>
+
+  <div *ngIf="erreur">
+    ❌ {{ erreur }}
+  </div>
+</div>
+</div>

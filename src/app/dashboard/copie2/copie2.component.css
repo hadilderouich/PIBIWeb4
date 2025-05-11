@@ -69,8 +69,23 @@ h1 {
   transition: all 0.3s ease;
   white-space: nowrap;
 }
-
+.interview-btn {
+  background-color: #878987;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
 .emotion-btn:hover {
+  background-color: #a6a8a6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.interview-btn:hover {
   background-color: #a6a8a6;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

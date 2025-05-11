@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7efef;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 140px;
+  display: block;
+}
+
+.form-container {
+  max-width: 450px;
+  margin: 70px auto;
+  padding: 50px;
+  border: 1px solid #ccc9c9;
+  border-radius: 10px;
+  background-color: #d6d1d1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  
+
+  
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 300px;
+}
+
+.h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #6b2328;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  background-color: #f3eeee;
+}
+
+input:focus {
+  border-color: #e94b4b;
+  outline: none;
+  box-shadow: 0 0 5px rgba(233, 75, 75, 0.3);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6b2328;
+  color: #f7f7f7;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:enabled {
+  background-color: #5e0202;
+}
+
+.error {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.success {
+  margin-top: 20px;
+  color: #2e7d32;
+  font-weight: 500;
+}
+.header {
+  background-color: #6b2328;
+  padding: 20px 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  gap: 20px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.logout-btn {
+  background-color: #6e7275;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.logout-btn:hover {
+  background-color: #7c0e0e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+

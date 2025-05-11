@@ -1,8 +1,16 @@
-import { Component, ViewChild, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { Router } from '@angular/router';
-import { EmotionDetectionService } from '../../services/emotion-detection.service';
-import * as tf from '@tensorflow/tfjs';
+
+import {
+  EmotionDetectionService,
+} from '../../services/emotion-detection.service';
 
 @Component({
   selector: 'app-copie2',
@@ -42,7 +50,7 @@ export class Copie2Component implements OnInit, OnDestroy {
       console.log('Emotion detection initialized successfully');
     }
   }
-
+ 
   async startEmotionDetection() {
     try {
       // Request access to the webcam
@@ -215,5 +223,8 @@ export class Copie2Component implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.stopEmotionDetection();
     this.emotionDetection.cleanup();
+  }
+  mlform(): void {
+    this.router.navigate(['/Formulaire']);
   }
 }
