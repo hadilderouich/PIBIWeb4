@@ -1,0 +1,179 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.left-side {
+  width: 50%;
+  background-color: #6b2328; /* fond blanc */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🔴 Login Box rouge */
+.login-box {
+  background-color: #e2dbdb; /* rouge foncé */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo {
+  width: 170px;
+  display: block;
+  margin: 0 auto 25px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #6b2328;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  background-color: #bfbaba;
+
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background-color: #6b2328;
+  color: #f7f7f7;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #5e0202;
+}
+
+.error-message {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.right-side {
+  width: 50%;
+  overflow: hidden;
+}
+
+.background-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.right-side {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.background-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.text-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 80%;
+  color: #ccc8c8;
+  background: rgba(53, 34, 34, 0.5); /* semi-transparent noir */
+  padding: 30px;
+  border-radius: 16px;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  box-shadow: 0 8px 20px rgba(180, 175, 175, 0.3);
+}
+/* Animations générales */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Appliquer aux éléments */
+.login-box {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+.text-overlay {
+  animation: zoomIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+/* Ajout d'une transition douce au survol du bouton */
+.btn-login {
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-login:hover {
+  background-color: #5e0202;
+  transform: scale(1.02);
+}
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  background-color: #d3cccc;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+/* Lors du survol */
+input:hover {
+  background-color: #e5dcdc;
+  box-shadow: 0 0 5px rgba(107, 35, 40, 0.4);
+}
+
+/* Lors du focus (écriture) */
+input:focus {
+  outline: none;
+  background-color: #f5eeee;
+  box-shadow: 0 0 8px rgba(107, 35, 40, 0.6);
+  transform: scale(1.02);
+}

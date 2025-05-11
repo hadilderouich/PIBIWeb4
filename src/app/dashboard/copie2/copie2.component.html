@@ -1,0 +1,49 @@
+<div class="dashboard-container">
+  <div class="header">
+    <img src="assets/image/logo.png" alt="Logo ESPRIT" class="logo" />
+    <h1>Welcome, Head of Admissions Services</h1>
+    <div class="header-buttons">
+      <button (click)="startEmotionDetection()" class="emotion-btn">Detect Emotion</button>
+      <button (click)="logout()" class="logout-btn">Logout</button>
+    </div>
+  </div>
+
+  <div class="powerbi-container">
+    <iframe 
+      title="Project_Esprit_Pi - Copie2" 
+      src="https://app.powerbi.com/reportEmbed?reportId=e8b92907-9eba-4abc-9a06-23514b06bf62&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730&navContentPaneEnabled=false" 
+      frameborder="0" 
+      allowFullScreen="true"
+    ></iframe>
+  </div>
+
+  <div class="image-upload-box">
+    <h3>Upload Photo for Emotion Detection</h3>
+    
+    <input type="file" accept="image/*" (change)="onImageSelected($event)" class="custom-file-input" />
+    
+    <div *ngIf="imagePreview" class="image-preview">
+      <img [src]="imagePreview" alt="Selected Image" />
+      <button (click)="detectImageEmotion()" class="detect-btn">Detect Emotion</button>
+    </div>
+  
+    <div *ngIf="imageEmotion" class="emotion-display-result">
+      <p>Detected Emotion: <strong>{{ imageEmotion.emotion }}</strong></p>
+    </div>
+  </div>
+  
+
+  <!-- Emotion Detection Modal -->
+  <div class="modal" [class.show]="showModal">
+    <div class="modal-content">
+      <span class="close" (click)="stopEmotionDetection()">&times;</span>
+      <h2>Emotion Detection</h2>
+      <div class="video-container">
+        <video #videoElement autoplay></video>
+        <canvas #canvasElement class="video-canvas"></canvas>
+      </div>
+      <div class="emotion-result" *ngIf="detectedEmotion">
+        Detected Emotion: <strong>{{ detectedEmotion }}</strong>
+      </div>
+    </div>
+  </div>

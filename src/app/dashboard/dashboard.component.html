@@ -1,0 +1,27 @@
+<div class="dashboard-container">
+  <div class="header">
+    <h1>Welcome, {{ userEmail }}</h1>
+    <button (click)="logout()" class="logout-btn">Logout</button>
+  </div>
+
+  <div class="powerbi-section">
+    <h2 class="section-title">Dashboard Power BI</h2>
+    <div class="powerbi-container">
+      <iframe 
+        title="Project_Esprit_Pi" 
+        width="100%" 
+        height="541.25" 
+        src="https://app.powerbi.com/reportEmbed?reportId=4d4cee2c-86f2-458e-b88f-0f8462dc9d17&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730" 
+        frameborder="0" 
+        allowFullScreen="true"
+      ></iframe>
+    </div>
+  </div>
+
+  <div class="role-buttons-section">
+    <h2 class="section-title">Access Your Space</h2>
+    <div class="button-container">
+      <button class="btn">Head of Employability and Quality Management</button>
+    </div>
+  </div>
+</div>
